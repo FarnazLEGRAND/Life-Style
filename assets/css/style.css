@@ -1,0 +1,275 @@
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================== HEADER ============================================= */
+
+header {
+    display: block;
+}
+
+header div {
+    text-align: center;
+}
+
+.logo {
+    height: 300px;
+    width: 300px;
+
+}
+
+nav {
+    margin: 0;
+    /* background-color: rgb(189, 191, 194); */
+    background-color: #BFA674;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    height: 100px;
+    line-height: 100px;
+
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding-right: 3em;
+    font-size: 22px;
+    /* color: #E4B5B1; */
+}
+
+/*======================================================== MAIN ============================================= */
+
+/* display:grid;
+grid: template columns 1fr 1fr 1fr; */
+
+/* } */
+/* ======================================================= BODY PAGE ACCEUIL ================================== */
+
+article {
+    background-color: #E4B5B1;
+    width: 70%;
+    /* baraye inke safhe vasat gharar begire */
+    margin: 0 auto;
+
+}
+
+article p {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+article h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+article img {
+    border: 10px;
+    border-color: #BFA674;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/* =========================================================== */
+/* aside section.gridImg{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+float: left;
+
+} */
+/* =========================================================== LIFE STYLE ============================================= */
+
+.life h2 {
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 40px;
+}
+
+form.life input[type=text] {
+    /* padding: 10px; */
+    font-size: 17px;
+    border: 2px solid#BFA674;
+    float: left;
+    width: 80%;
+    height: auto;
+    background: #ffffff;
+}
+
+form.life button {
+    float: left;
+    width: 10%;
+    height: auto;
+    /* padding: 10px; */
+    background: #BFA674;
+    color: white;
+    font-size: 17px;
+    /* border: 1px solid #BFA674; */
+    border-left: none;
+    cursor: pointer;
+}
+
+section {
+    background-color: #E4B5B1;
+    width: 70%;
+    /* baraye inke safhe vasat gharar begire */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.image-grid {
+    --gap: 16px;
+    /* 3 ta colon mikham ba ertefah 600 deraz bashe mostatil */
+    --num-cols: 3;
+    --row-height: 600px;
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    /* 3 ta colume daram */
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    /* ertefah hamash 600 bashe */
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+section h1 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+/* ========================================================= MUSIQUE ============================================= */
+
+.image-grid2 {
+    --gap: 16px;
+    /* 3 ta colon mikham ba ertefah 600 deraz bashe mostatil */
+    --num-cols: 2;
+    --row-height: 400px;
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    /* 3 ta colume daram */
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    /* ertefah hamash 600 bashe */
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid2-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid2-row-2 {
+    grid-row: span 2;
+}
+
+.music h1 {
+    text-align: right;
+    font-size: 60px;
+    max-width: 67vw;
+
+}
+
+hr {
+    color: #BFA674;
+}
+
+/* ==========================================================CONTACT ============================================= */
+
+/* Nos contacte */
+aside {
+    background-color: #E4B5B1;
+    width: 70%;
+    /* baraye inke safhe vasat gharar begire */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.content h2 {
+    text-align: center;
+    padding-top: 1em;
+    /* color: #BFA674;   */
+}
+
+aside.content form {
+    text-align: center;
+    /* border-color: #BFA674; */
+
+}
+
+.content form input {
+    padding: 5px 0px 5px 0px;
+    /* float: left; */
+    width: 70%;
+    margin-bottom: 10px;
+    border: 3px solid #BFA674;
+}
+
+.content form textarea {
+    margin: 10px 30px 0 30px;
+    /* float: left; */
+    width: 70%;
+    border: 3px solid #BFA674;
+}
+
+.content button {
+    margin: 10px 0 10px 0;
+    /* float: right; */
+    width: 40%;
+    background: #BFA674;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #BFA674;
+
+}
+
+/* ========================================================= FOOTER ============================================= */
+
+footer {
+    background-color: #BFA674;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}

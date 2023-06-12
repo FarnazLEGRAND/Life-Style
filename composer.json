@@ -1,0 +1,21 @@
+{
+    "name": "farnaz/life-style",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public"
+    },
+    "authors": [
+        {
+            "name": "FarnazLEGRAND",
+            "email": "116880622+FarnazLEGRAND@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "process-timeout": 0
+    }
+}
