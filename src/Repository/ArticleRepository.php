@@ -9,6 +9,10 @@ use App\Repository\Database;
 class ArticleRepository{
 
     // liste mes article
+        /**
+     * Summary of findAll
+     * @return Article[]
+     */
     public function findAll(): array
     {
         $list = [];
@@ -17,7 +21,7 @@ class ArticleRepository{
         $query->execute();
 
         foreach ($query->fetchAll() as $item) {
-            $list[] = new Article($item['titre'],$item['picname'],$item['contenu'], $item['author'],$item['datepub'],$item['id']);
+            $list[] = new Article($item['titre'],$item['picname'],$item['contenu'], $item['author'],$item['id']);
         }
         return $list;
     }
@@ -28,11 +32,11 @@ class ArticleRepository{
     {
         $connection = Database::getConnection();
 
-        $query = $connection->prepare("INSERT INTO article (titre,picname,contenu,author,datepub) VALUES (:titre,:picname,:contenu,:author,:detabub)");
-        $query->bindValue(':titre', $article->getTitre());
-        $query->bindValue('picname',$article->getPicname());
-        $query->bindValue('contenu',$article->getContenu());
-        $query->bindValue('author',$article->getAuthor());
+        $query = $connection->prepare("INSERT INTO article(titre,picname,contenu,author,datepub) VALUES (:titre,:picname,:contenu,:author,:datepub)");
+        $query->bindValue(':titre',$article->getTitre());
+        $query->bindValue(':picname',$article->getPicname());
+        $query->bindValue(':contenu',$article->getContenu());
+        $query->bindValue(':author',$article->getAuthor());
         $query->bindValue(':datepub',$article->getDatepub());
 
         $query->execute();
@@ -40,22 +44,30 @@ class ArticleRepository{
         $article->setId($connection->lastInsertId());
     }
     // Lister les articles par catégorie
-    public function findById(int $id): ?Article
-    {
+    public function findByCategory(int $id): array{
+        $list = [];
+        $connection = Database::getConnection();
+        $query = $connection->prepare("SELECT * FROM article  WHERE id_category=:id");
+        $query->bindValue(":id", $id);
+        foreach ($query->fetchAll() as $item) {
+            $list[] = new Article($item['titre'],$item['picname'],$item['contenu'], $item['author'],$item['id']);
+        }
+        return $list;
+    } 
+
+    public function findById(int $id):?Article {
 
         $connection = Database::getConnection();
 
-        $query = $connection->prepare("SELECT * FROM article a
-         INNER JOIN category ON category.id = a.id_category;");
-        // $query->bindValue(":id", $id);
+        $query = $connection->prepare("SELECT * FROM article WHERE id=:id ");
+        $query->bindValue(":id", $id);
         $query->execute();
-//  nom de colone injast na dakhelesh ke por mikonim
-        foreach ($query->fetchAll() as $item) {
-            return new Article($item['titre'],$item['picname'],$item['contenu'], $item['author'],$item['datepub'],$item['id']);
-        }
-        return null;
-
+    foreach ($query->fetchAll() as $item) {
+        return new Article($item['titre'],$item['picname'],$item['contenu'], $item['author'],$item['id'],$item['datepub']);
     }
+    return null;
+
+}
 
 }
 

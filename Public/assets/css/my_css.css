@@ -24,33 +24,27 @@ header div {
 
 }
 
-nav {
-    margin: 0;
-    /* background-color: rgb(189, 191, 194); */
+
+.my_nav {
     background-color: #BFA674;
+    border-radius: 1px;
+    /* width: 50vw; */
+    /* height: 80px; */
+    margin: auto;
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+    align-items: center;
+    justify-content: center;  
 }
 
-nav ul {
-    margin: 0;
-    height: 100px;
-    line-height: 100px;
 
-}
 
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
+.nav-link{
     text-decoration: none;
-    color: black;
-    padding-right: 3em;
-    font-size: 22px;
-    /* color: #E4B5B1; */
+    color: rgb(0, 0, 0)!important;
 }
+
+
+
 
 /*======================================================== MAIN ============================================= */
 

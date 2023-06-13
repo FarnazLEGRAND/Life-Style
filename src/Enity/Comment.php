@@ -6,9 +6,9 @@ class Comment{
     private ?int $id;
     private int $note;
     private string $description;
-    private DateTime $date;
+    private ?DateTime $date;
 
-    public function __construct(int $note, string $description, DateTime $date, ?int $id){
+    public function __construct(int $note, string $description, ?int $id=null,?DateTime $date=null){
   $this->id=$id;
   $this->note=$note;
   $this->description=$description;
@@ -68,7 +68,7 @@ class Comment{
 	/**
 	 * @return DateTime
 	 */
-	public function getDate(): DateTime {
+	public function getDate(): ?DateTime {
 		return $this->date;
 	}
 	
@@ -76,7 +76,7 @@ class Comment{
 	 * @param DateTime $date 
 	 * @return self
 	 */
-	public function setDate(DateTime $date): self {
+	public function setDate(?DateTime $date): self {
 		$this->date = $date;
 		return $this;
 	}

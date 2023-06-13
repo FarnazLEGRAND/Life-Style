@@ -6,9 +6,17 @@ use App\Enity\Category;
 use App\Enity\Article;
 use App\Repository\Database;
 
+/**
+ * Summary of CategoryRepository
+ */
 class CategoryRepository{
 
-    // liste mes article
+    // liste mes category
+    
+    /**
+     * Summary of findAll
+     * @return Category[]
+     */
     public function findAll(): array
     {
         $list = [];
@@ -34,4 +42,10 @@ class CategoryRepository{
 
         $category->setId($connection->lastInsertId());
     }
+
 }
+
+
+
+
+

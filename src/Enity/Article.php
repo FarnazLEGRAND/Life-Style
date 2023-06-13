@@ -10,10 +10,10 @@ class Article
 	private  string $picname;
     private string $contenu;
     private string $author;
-    private DateTime $datepub;
+    private ?DateTime $datepub;
 	
 
-    public function __construct(string $titre,string $picname,string $contenuu, string $author, DateTime $datepub, ?int $id = null)
+    public function __construct(string $titre,string $picname,string $contenuu, string $author, ?int $id = null, ?DateTime $datepub =null)
     {
         $this->id = $id;
         $this->titre = $titre;
@@ -92,7 +92,7 @@ class Article
 	/**
 	 * @return DateTime
 	 */
-	public function getDatepub(): DateTime {
+	public function getDatepub(): ?DateTime {
 		return $this->datepub;
 	}
 	
@@ -100,7 +100,7 @@ class Article
 	 * @param DateTime $datepub 
 	 * @return self
 	 */
-	public function setDatepub(DateTime $datepub): self {
+	public function setDatepub(?DateTime $datepub): self {
 		$this->datepub = $datepub;
 		return $this;
 	}
