@@ -26,6 +26,7 @@
             <a class="nav-link" href="creearticle.php">Créer un article</a>
             <a class="nav-link" href="articles.php">Article</a>
             <a class="nav-link" href="category.php">Categorie</a>
+            <!-- <a class="nav-link" href="article.php">Comentaire</a> -->
         </nav>
     </div>
 

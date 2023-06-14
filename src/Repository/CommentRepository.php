@@ -40,7 +40,7 @@ class CommentRepository
     }
 
 
-    public function findById(int $id): ?Comment
+    public function findByComent(int $id): ?Comment
     {
 
         $connection = Database::getConnection();
@@ -54,6 +54,25 @@ class CommentRepository
             return new Comment($item['note'], $item['description'], $item['date'], $item['id']);
         }
         return null;
+
+    }
+
+
+    public function findById(int $id): ?Comment
+    {
+
+        $connection = Database::getConnection();
+
+        $query = $connection->prepare("SELECT * FROM commentaire");
+       
+        $query->bindValue(":id", $id);
+        $query->execute();
+        foreach ($query->fetchAll() as $item) {
+            return new Comment($item['note'], $item['description'], $item['date'], $item['id']);
+        }
+        return null;
+
+    
 
     }
 

@@ -12,17 +12,17 @@ $articles = $repository->findAll();
 
 ?>
 
-
+<title>lister tt les articles</title>
 
 <main>
     <section>
-        <title>lister tt les articles</title>
+        
         <div class="container-fluid">
             <h1>All Article</h1>
             <div class="row g-3">
                 <?php foreach ($articles as $item): ?>
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card h-100">
 
                             <div class="card-body">
                                 <h4 class="card-title">

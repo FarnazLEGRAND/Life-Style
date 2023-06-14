@@ -1,6 +1,7 @@
 <?php
 use App\Enity\Comment;
 use App\Repository\ArticleRepository;
+use App\Repository\CategoryRepository;
 use App\Repository\CommentRepository;
 
 require '../vendor/autoload.php';
@@ -11,12 +12,18 @@ $comment = $repoComentaire->finByArticle($_GET["id"]);
 
 $repository = new ArticleRepository();
 $article = $repository->findById($_GET["id"]);
+
+
+
+
+
 ?>
 <title>ecrire des commentaires sur d'un article</title>
 <main>
     <section>
         <div id="Keepitsimpl" class="music">
             <h1>Music <br>Keep it simple</h1>
+           
         </div>
         <div class="image-grid2">
             <div>
@@ -50,7 +57,7 @@ $article = $repository->findById($_GET["id"]);
                     </select>
                 </div>
                 <div>
-                    <textarea>votre Commentaire</textarea>
+                    <textarea placeholder="votre Commentaire"></textarea>
                 </div>
                 <div>
                     <button type="submit" name="submit" value="ok" class="btn btn-outline-secondary" style="background-color:  #BFA674; color:#000
@@ -63,7 +70,9 @@ $article = $repository->findById($_GET["id"]);
 
         <?php foreach ($comment as $item): ?>
             <p>
-                <?= $item->getNote() ?>
+                Note:
+                <?= $item->getNote() ?> *
+                Commentaire:
                 <?= $item->getDescription() ?>
             </p>
         <?php endforeach; ?>

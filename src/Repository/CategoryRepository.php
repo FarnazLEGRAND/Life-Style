@@ -9,10 +9,11 @@ use App\Repository\Database;
 /**
  * Summary of CategoryRepository
  */
-class CategoryRepository{
+class CategoryRepository
+{
 
     // liste mes category
-    
+
     /**
      * Summary of findAll
      * @return Category[]
@@ -25,7 +26,7 @@ class CategoryRepository{
         $query->execute();
 
         foreach ($query->fetchAll() as $item) {
-            $list[] = new Category($item['lable'],$item['id']);
+            $list[] = new Category($item['lable'], $item['id']);
         }
         return $list;
     }
@@ -36,16 +37,26 @@ class CategoryRepository{
 
         $query = $connection->prepare("INSERT INTO category (lable) VALUES (:lable)");
         $query->bindValue(':lable', $category->getLable());
-       
+
 
         $query->execute();
 
         $category->setId($connection->lastInsertId());
     }
 
+    public function findById(int $id): ?Category
+    {
+
+        $connection = Database::getConnection();
+
+        $query = $connection->prepare("SELECT * FROM category WHERE id=:id ");
+        $query->bindValue(":id", $id);
+        $query->execute();
+        foreach ($query->fetchAll() as $item) {
+            return new Category($item['lable'], $item['id']);
+        }
+        return null;
+
+    }
+
 }
-
-
-
-
-

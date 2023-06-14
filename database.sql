@@ -35,15 +35,16 @@ CREATE TABLE
         Foreign Key (id_article) REFERENCES article(id)
     );
 
-INSERT INTO
-    category(lable)
-VALUES
-('Music'), ('Photographie'), ('life Style');
+INSERT INTO category(lable)
+VALUES ('Music
+Keep it simple
+'), ('life style 
+loving you'), ('Music
+it calme');
 
 INSERT INTO
     article(titre, picname, contenu, author)
-VALUES
-(
+VALUES (
         "Influence de la musique sur l'esprit et le corps  ",
         "effet-musique-630x200.jpg",
         "On ne sort pas de cette vérité : la musique nous fait du bien. Chacun d'entre nous peut la confirmer, mais en plus, il y a des études scientifiques fiables qui le prouvent. Ces études ont par exemple montré que le fait d'écouter de la  musique une fois qu'on est allongé ",
@@ -75,4 +76,6 @@ VALUES
         "Alex Armand"
     );
 
-INSERT INTO commentaire(note,description,nome) VALUES( "2","love this","sara");
+INSERT INTO
+    commentaire(note, description, nome)
+VALUES (3, "love it", "sara"), (5, "Nice style", "Alex"), (4, "Good job", "Jean");
