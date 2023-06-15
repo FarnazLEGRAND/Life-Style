@@ -21,6 +21,8 @@ Ajouter de l'upload de fichiers pour que nos articles puissent avoir une image d
 Faire que les catégories puissent avoir des sous catégories
 Faire que l'ajout de catégorie puisse se faire via une requête AJAX en JS au moment de la création de l'article
 
-
+--------------------
+J'ai dossier include pour mon Footer et Header.
+J'ai une dossier assets de dans vous pouvez trouver dossier diagrame et figma.
 
 credit photo et text by:http://musicblog.fr

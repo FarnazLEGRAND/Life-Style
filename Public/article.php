@@ -23,7 +23,7 @@ $article = $repository->findById($_GET["id"]);
     <section>
         <div id="Keepitsimpl" class="music">
             <h1>Music <br>Keep it simple</h1>
-           
+
         </div>
         <div class="image-grid2">
             <div>

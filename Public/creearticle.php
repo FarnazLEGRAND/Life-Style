@@ -28,7 +28,7 @@ $repository = new ArticleRepository();
                         <!-- <label for="name">Titre votre Article : </label> -->
                         <input id="name" type="text" name="titre" value="" placeholder="Titre votre Article :">
                     </div>
-                  
+
                     <div class="group log-input">
                         <!-- <label for="picname">pic. : </label> -->
                         <input id="picname" type="text" name="picname" placeholder="pic">
@@ -46,9 +46,9 @@ $repository = new ArticleRepository();
                     <div class="group log-input">
                         <label for="category">Category : </label>
                         <br>
-                        <select name="category" id="category" >
+                        <select name="category" id="category">
                             <?php foreach ($category as $item): ?>
-                                <option   value="<?= htmlspecialchars($item->getId()) ?>"><?= htmlspecialchars($item->getLable()) ?></option>
+                                <option value="<?= htmlspecialchars($item->getId()) ?>"><?= htmlspecialchars($item->getLable()) ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>

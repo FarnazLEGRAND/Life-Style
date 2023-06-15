@@ -16,7 +16,7 @@ $articles = $repository->findAll();
 
 <main>
     <section>
-        
+
         <div class="container-fluid">
             <h1>All Article</h1>
             <div class="row g-3">
@@ -29,18 +29,17 @@ $articles = $repository->findAll();
                                     <?= $item->getTitre() ?>
                                 </h4>
                                 <div>
-                            
-                                <img src="../assets/img/<?= ($item->getPicname()) ?>" class="card-img-top"
-                                 width="100%"
-                                 height="100%">
-                                 </div>
+
+                                    <img src="../assets/img/<?= ($item->getPicname()) ?>" class="card-img-top" width="100%"
+                                        height="100%">
+                                </div>
                                 <p>
                                     <?= htmlspecialchars($item->getContenu()) ?>
                                 </p>
                                 <p class="card-text text-end">
                                     <?= htmlspecialchars($item->getAuthor()) ?>
                                 </p>
-                          
+
                                 <a href="article.php?id=<?= $item->getId() ?>" class="card-link">Commentaire</a>
                             </div>
                         </div>

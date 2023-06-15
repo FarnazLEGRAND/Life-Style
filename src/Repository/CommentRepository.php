@@ -64,7 +64,7 @@ class CommentRepository
         $connection = Database::getConnection();
 
         $query = $connection->prepare("SELECT * FROM commentaire");
-       
+
         $query->bindValue(":id", $id);
         $query->execute();
         foreach ($query->fetchAll() as $item) {
@@ -72,7 +72,7 @@ class CommentRepository
         }
         return null;
 
-    
+
 
     }
 

@@ -33,14 +33,14 @@ header div {
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
 }
 
 
 
-.nav-link{
+.nav-link {
     text-decoration: none;
-    color: rgb(0, 0, 0)!important;
+    color: rgb(0, 0, 0) !important;
 }
 
 
@@ -82,14 +82,14 @@ article img {
     margin-top: 0px;
 }
 
-/* =========================================================== */
+/* ======================================================== */
 /* aside section.gridImg{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 float: left;
 
 } */
-/* =========================================================== Article ============================================= */
+/* ======================================================== Article ============================================= */
 
 .life h2 {
     padding-top: 5vh;
@@ -166,7 +166,7 @@ section h1 {
     font-size: 30px;
 }
 
-/* ========================================================= MUSIQUE Category ============================================= */
+/* ========================================================Life Category ============================================= */
 
 .image-grid2 {
     --gap: 16px;
@@ -208,7 +208,7 @@ hr {
     color: #BFA674;
 }
 
-/* ==========================================================Créer un article ============================================= */
+/* ======================================================== Créer un article ============================================= */
 
 /* Nos contacte */
 aside {
@@ -231,7 +231,7 @@ aside.content form {
 
 }
 
-.content form input  {
+.content form input {
     padding: 5px 0px 5px 0px;
     /* float: left; */
     width: 70%;
@@ -239,13 +239,14 @@ aside.content form {
     border: 3px solid #BFA674;
 }
 
-.content form  select {
+.content form select {
     padding: 5px 0px 5px 0px;
     /* float: left; */
     width: 70%;
     margin-bottom: 10px;
     border: 3px solid #BFA674;
 }
+
 .content form textarea {
     margin: 10px 30px 0 30px;
     /* float: left; */
@@ -265,7 +266,7 @@ aside.content form {
 }
 
 
-/* ========================================================= FOOTER ============================================= */
+/* ======================================================== FOOTER ============================================= */
 
 footer {
     background-color: #BFA674;
